@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <% for (var key in htmlWebpackPlugin.files.css) { %>
+    <link href="<%= htmlWebpackPlugin.files.css[key] %>" rel="stylesheet">
+    <% } %>
+</head>
+<body>
+
+<div class="load-images">
+    <div class="load-images__body">
+        <div class="load-images__cell">
+            <div class="load-button" id="lb">
+                <div class="load-button__left-side">
+                    <input type="file" class="load-button__button-load-files" multiple />
+                    <div class="load-button__cross-icon">
+
+                    </div>
+                    <div class="load-button__cross-label">
+                        <span>Загрузить фото</span>
+                    </div>
+                </div>
+                <div class="load-button__right-side">
+                    <div class="load-button__description">
+                        <span>Можно перетащить файлы в данный блок</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<% for (let key in htmlWebpackPlugin.files.js) { %>
+<script src="<%= htmlWebpackPlugin.files.js[key] %>"></script>
+<% } %>
+</body>
+</html>

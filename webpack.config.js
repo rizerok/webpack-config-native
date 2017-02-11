@@ -72,7 +72,8 @@ module.exports = {
             info:{
                 name: packageJson.name,
                 version: packageJson.version,
-                description: packageJson.description
+                description: packageJson.description,
+                repository:packageJson.repository.url
             },
             title: app.name,
             inject: false,

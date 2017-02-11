@@ -9,11 +9,13 @@ var webpack                         = require('webpack'),
 var packageJson = require(__dirname + '/package.json');
 var app = {
     name:packageJson.name[0].toUpperCase() + packageJson.name.slice(1),
-    path:path.join(__dirname,'app')
+    path:path.join(__dirname,'app'),
+    globalStylePath:path.join(__dirname,'style')
 };
 module.exports = {
     entry:{
-        ['js/'+packageJson.name]:'./app/app.js'
+        ['js/'+packageJson.name]:'./app/app.js',
+        'css/style.bundle':'./style/style.styl'
     },
     output:{
         path:'./bundle/',
@@ -37,7 +39,8 @@ module.exports = {
                 loader: ExtractTextPlugin.extract('style-loader', 'css-loader!autoprefixer-loader?browsers=last 10 version!stylus-loader'),
                 test: /\.styl$/,
                 include:[
-                    app.path
+                    app.path,
+                    app.globalStylePath
                 ]
             },
             {

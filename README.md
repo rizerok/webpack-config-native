@@ -2,6 +2,6 @@
 my webpack config
 ##Install
 ```sh
-git clone https://github.com/rizerok/webpack-config-native
+git clone https://github.com/rizerok/webpack-config-native .
 npm i
 ```

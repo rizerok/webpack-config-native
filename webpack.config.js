@@ -13,7 +13,7 @@ var app = {
 };
 module.exports = {
     entry:{
-        ['js/'+packegeJson.name]:'./app/app.js'
+        ['js/'+packageJson.name]:'./app/app.js'
     },
     output:{
         path:'./bundle/',

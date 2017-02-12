@@ -22,6 +22,12 @@ module.exports = {
         filename:'[name].js',
         publicPath: '/bundle/'
     },
+    resolve:{
+        alias:{
+            _app:app.path,
+            _classes:path.join(__dirname,'app','classes')
+        }
+    },
     module: {
         loaders: [
             {
